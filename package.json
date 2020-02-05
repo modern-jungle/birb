@@ -1,0 +1,39 @@
+{
+  "name": "modern-jungle-cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "semantic-release": "^17.0.2"
+  },
+  "dependencies": {
+    "knex": "<0.20.0",
+    "sqlite3": "latest",
+    "strapi": "3.0.0-beta.18.7",
+    "strapi-admin": "3.0.0-beta.18.7",
+    "strapi-connector-bookshelf": "3.0.0-beta.18.7",
+    "strapi-plugin-content-manager": "3.0.0-beta.18.7",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.18.7",
+    "strapi-plugin-email": "3.0.0-beta.18.7",
+    "strapi-plugin-upload": "3.0.0-beta.18.7",
+    "strapi-plugin-users-permissions": "3.0.0-beta.18.7",
+    "strapi-utils": "3.0.0-beta.18.7"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "a37a7811-da5e-4c0b-97f1-321324e30c67"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

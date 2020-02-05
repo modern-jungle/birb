@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    branches: master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          extra_plugins: |
+            @semantic-release/git
+
+      - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+        with:
+          version: "278.0.0"
+          service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+
+      - run: gcloud auth configure-docker --quiet
+
+      - name: Build the Docker image
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        run: docker build -f ./docker/modern-jungle-cms.Dockerfile -t gcr.io/$GCP_PROJECT_ID/modern-jungle-cms:$(git describe --abbrev=0 --tags) .
+
+      - name: Push the Docker image
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+        run: gcloud --verbosity=error docker -- push gcr.io/$GCP_PROJECT_ID/modern-jungle-cms:$(git describe --abbrev=0 --tags)
