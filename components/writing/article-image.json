@@ -1,0 +1,23 @@
+{
+  "connection": "default",
+  "collectionName": "components_writing_article_images",
+  "info": {
+    "name": "article_image",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}

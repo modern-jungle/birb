@@ -1,0 +1,18 @@
+{
+  "connection": "default",
+  "collectionName": "components_writing_article_sections",
+  "info": {
+    "name": "article_section",
+    "icon": "align-left"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext",
+      "required": true
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}

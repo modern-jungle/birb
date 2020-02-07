@@ -1,0 +1,17 @@
+{
+  "connection": "default",
+  "collectionName": "components_writing_article_image_full_bleeds",
+  "info": {
+    "name": "article_image_full_bleed",
+    "icon": "laptop-code"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

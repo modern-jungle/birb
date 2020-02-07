@@ -13,11 +13,7 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
-    "image": {
+    "hero": {
       "model": "file",
       "via": "related",
       "plugin": "upload",
@@ -29,6 +25,32 @@
     },
     "category": {
       "model": "category",
+      "via": "articles"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "writing.article-image-full-bleed",
+        "writing.article-image",
+        "writing.article-section",
+        "writing.quote"
+      ]
+    },
+    "subjects": {
+      "collection": "subject",
+      "via": "article"
+    },
+    "preview": {
+      "type": "text",
+      "required": true
+    },
+    "light_title": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "author": {
+      "model": "author",
       "via": "articles"
     }
   }

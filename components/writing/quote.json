@@ -1,0 +1,19 @@
+{
+  "connection": "default",
+  "collectionName": "components_writing_quotes",
+  "info": {
+    "name": "article_quote",
+    "icon": "comment"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "source": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
