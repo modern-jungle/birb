@@ -11,7 +11,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "hero": {
       "model": "file",
@@ -52,6 +53,10 @@
     "author": {
       "model": "author",
       "via": "articles"
+    },
+    "slug": {
+      "type": "string",
+      "unique": true
     }
   }
 }
