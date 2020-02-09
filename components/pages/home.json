@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_pages_homes",
+  "info": {
+    "name": "home",
+    "icon": "home"
+  },
+  "options": {},
+  "attributes": {
+    "featured_category": {
+      "model": "category"
+    }
+  }
+}
