@@ -45,11 +45,6 @@
       "type": "text",
       "required": true
     },
-    "light_title": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
     "author": {
       "model": "author",
       "via": "articles"
@@ -57,6 +52,11 @@
     "slug": {
       "type": "string",
       "unique": true
+    },
+    "weekly_feature": {
+      "type": "boolean",
+      "required": true,
+      "default": false
     }
   }
 }
