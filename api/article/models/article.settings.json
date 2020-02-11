@@ -37,10 +37,6 @@
         "writing.quote"
       ]
     },
-    "subjects": {
-      "collection": "subject",
-      "via": "article"
-    },
     "preview": {
       "type": "text",
       "required": true
@@ -56,6 +52,10 @@
     "weekly_feature": {
       "type": "boolean",
       "default": false
+    },
+    "subjects": {
+      "via": "articles",
+      "collection": "subject"
     }
   }
 }

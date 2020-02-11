@@ -13,9 +13,10 @@
       "type": "string",
       "required": true
     },
-    "article": {
+    "articles": {
+      "collection": "article",
       "via": "subjects",
-      "model": "article"
+      "dominant": true
     }
   }
 }
