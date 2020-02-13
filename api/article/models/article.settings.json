@@ -42,8 +42,8 @@
       "required": true
     },
     "author": {
-      "model": "author",
-      "via": "articles"
+      "via": "articles",
+      "model": "author"
     },
     "slug": {
       "type": "string",
